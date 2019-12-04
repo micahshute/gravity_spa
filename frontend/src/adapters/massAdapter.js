@@ -6,7 +6,7 @@ const MassAdapter = (function(){
     return class{
 
         // Class method to retrieve singleton instance
-        static instance(token = null){
+        static get instance(){
             if(instance === null){ instance = new this() }
             return instance
         }
@@ -30,7 +30,7 @@ const MassAdapter = (function(){
             return `${this.baseURL}/masses`
         }
 
-            massURL(id){
+        massURL(id){
             return `${this.massesURL}/${id}`
         }
 
