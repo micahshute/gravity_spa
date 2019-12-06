@@ -49,6 +49,7 @@ const MassAdapter = (function(){
             }
         }
 
+
         async getMasses(){
             const res = await fetch(this.massesURL)
             this.checkStatus(res)

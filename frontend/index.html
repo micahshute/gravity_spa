@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
+    <script src="src/machines/physicsMachine.js"></script>
     <script src="src/components/app.js"></script>
     <script src="src/components/massSelector.js"></script>
     <script src="src/components/mass.js"></script>
@@ -33,6 +34,10 @@
             <button id="begin-sim">Begin Simulation</button>
             <button id="zoom-in">Zoom In</button>
             <button id="zoom-out">Zoom Out</button>
+            <button id="clear-sim">Clear Simulation</button>
+            <p>Initial Velocity X:<input id="xvel" type="number" value=0><span>m/s (right)</span></p>
+            <p>Initial Velocity Y:<input id="yvel" type="number" value=0><span>m/s (down)</span></p>
+            <p>Speed Ratio:<input id="speed-ratio" type="number" value=1><span>times RL</span></p>
             <div id="universe-sim">
 
             </div>

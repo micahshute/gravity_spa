@@ -4,7 +4,6 @@ class MassSelector{
         this.masses = []
         this.initBindingsAndEventListeners()
         this.fetchAndLoadMasses()
-        this.render()
         this.selectedMass = null
     }
 
@@ -19,6 +18,7 @@ class MassSelector{
     async fetchAndLoadMasses(){
 
         this.masses = await Mass.retrieveAll()
+        this.render()
     }   
 
     selectMassHandler(e){
@@ -42,6 +42,8 @@ class MassSelector{
             }
         }
     }
+
+    
 
     render(){
         this.allMassesContainer.innerHTML = this.masses.map(mass => mass.htmlWithLabel).join('')

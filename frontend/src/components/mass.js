@@ -51,7 +51,7 @@ class Mass{
     get htmlWithLabel(){
         return (`
             <div class='mass-border'>
-                ${this.htmlPicture}
+                ${this.htmlPicture()}
                 <ul>
                     <li>${this.name}</li>
                     <li>Radius: ${this.radius} m</li>
@@ -64,9 +64,9 @@ class Mass{
 
 
 
-    get htmlPicture(){
+    htmlPicture(styleInsert = ''){
         return (`
-            <div class='circle' style='height: ${this.alteredPixelSize}px; width: ${this.alteredPixelSize}px;' >
+            <div class='circle' style='height: ${this.alteredPixelSize}px; width: ${this.alteredPixelSize}px; ${styleInsert}' >
             </div>
         `)
     }
